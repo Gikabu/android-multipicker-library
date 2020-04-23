@@ -372,6 +372,14 @@ public class FileProcessorThread extends Thread {
                     data[1] = null;
                     return data;
                 }
+                
+                if (id.startsWith("mfs:")) {
+                    String[] data1 = new String[2];
+                    data1[0] = id.replaceFirst("mfs:", "");
+                    data1[1] = null;
+                    return data1;
+                }
+                
                 Uri contentUri = uri;
                 if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
                     contentUri = ContentUris.withAppendedId(
