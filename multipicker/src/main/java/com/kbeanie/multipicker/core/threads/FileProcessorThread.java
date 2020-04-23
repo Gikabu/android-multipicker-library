@@ -373,9 +373,9 @@ public class FileProcessorThread extends Thread {
                     return data;
                 }
                 
-                if (id.startsWith("mfs:")) {
+                if (id.startsWith("msf:")) {
                     String[] data1 = new String[2];
-                    data1[0] = id.replaceFirst("mfs:", "");
+                    data1[0] = id.replaceFirst("msf:", "");
                     data1[1] = null;
                     return data1;
                 }
